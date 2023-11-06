@@ -13,7 +13,12 @@ const body = document.body;
 
 themeToggle.addEventListener('click', () => {
   // Toggle dark mode
-  body.classList.toggle('dark_style');
+  if (body.classList.contains('style')) {
+    body.classList.toggle('dark_style');
+  }
+  else {
+    body.classList.toggle('style');
+  }
 
   // Save the user's preference to local storage
   if (body.classList.contains('dark_style')) {
