@@ -13,10 +13,10 @@ const body = document.body;
 
 themeToggle.addEventListener('click', () => {
   // Toggle dark mode
-  body.classList.toggle('dark-theme');
+  body.classList.toggle('dark_style');
 
   // Save the user's preference to local storage
-  if (body.classList.contains('dark-theme')) {
+  if (body.classList.contains('dark_style')) {
     localStorage.setItem('theme', 'dark');
   } else {
     localStorage.setItem('theme', 'light');
@@ -26,7 +26,7 @@ themeToggle.addEventListener('click', () => {
 // Check user's preference from local storage on page load
 const userPreference = localStorage.getItem('theme');
 if (userPreference === 'dark') {
-  body.classList.add('dark-theme');
+  body.classList.add('dark_style');
 }
 
 function initBoard() {
