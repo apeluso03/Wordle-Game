@@ -8,6 +8,27 @@ let rightGuessString = WORDS[Math.floor(Math.random() * WORDS.length)];
 
 console.log(rightGuessString);
 
+const themeToggle = document.getElementById('theme-toggle');
+const body = document.body;
+
+themeToggle.addEventListener('click', () => {
+  // Toggle dark mode
+  body.classList.toggle('dark-theme');
+
+  // Save the user's preference to local storage
+  if (body.classList.contains('dark-theme')) {
+    localStorage.setItem('theme', 'dark');
+  } else {
+    localStorage.setItem('theme', 'light');
+  }
+});
+
+// Check user's preference from local storage on page load
+const userPreference = localStorage.getItem('theme');
+if (userPreference === 'dark') {
+  body.classList.add('dark-theme');
+}
+
 function initBoard() {
   let board = document.getElementById("game-board");
 
