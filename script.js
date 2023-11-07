@@ -11,7 +11,7 @@ console.log(rightGuessString);
 const themeToggle = document.getElementById('theme-toggle');
 const body = document.body;
 
-themeToggle.addEventListener('click', () => {
+themeToggle.addEventListener('change', () => {
   // Toggle dark mode
   var element = document.body;
   element.classList.toggle("dark-mode");
