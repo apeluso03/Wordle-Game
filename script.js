@@ -27,7 +27,7 @@ themeToggle.addEventListener('click', () => {
 // Check user's preference from local storage on page load
 const userPreference = localStorage.getItem('theme');
 if (userPreference === 'dark') {
-  body.classList.add('dark_style');
+  body.classList.add('dark-mode');
 }
 
 function initBoard() {
